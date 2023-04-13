@@ -19,11 +19,11 @@ class AccountSerializer(serializers.ModelSerializer):
 
 class CreditCardSerializer(serializers.ModelSerializer):
     class Meta:
-        model = CreditCard
+        model = Card
         fields = ['credit_card_type', 'card_number', 'expiry_date', 'cvv']
         expiry_date = serializers.DateField(read_only=True)
 
 
 class UserCreate(UserCreateSerializer):
     class Meta(UserCreateSerializer.Meta):
-        fields = ['id', 'username', 'email', 'password', 'first_name', 'last_name']
+        fields = ['id', 'username', 'email', 'password', 'first_name', 'last_name', 'phone']

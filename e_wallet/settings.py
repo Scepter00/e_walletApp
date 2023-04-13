@@ -50,7 +50,7 @@ THIRD_PARTY = [
     'rest_framework',
     'debug_toolbar',
     'djoser',
-    # 'rest_framework.authtoken',
+    'rest_framework.authtoken',
 ]
 
 INSTALLED_APPS = DJANGO_APPS + LOCAL_APPS + THIRD_PARTY
@@ -144,12 +144,15 @@ INTERNAL_IPS = [
 
 AUTH_USER_MODEL = 'wallet_app.WalletUser'
 
+MEDIA_ROOT = 'media'
+
 REST_FRAMEWORK = {
     'COERCE_DECIMAL_TO_STRING': False,
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ),
 }
+
 
 SIMPLE_JWT = {
     'AUTH_HEADER_TYPES': ('JWT',),

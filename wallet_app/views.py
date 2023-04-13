@@ -17,5 +17,5 @@ class AddAccount(ModelViewSet):
 
 
 class AddCreditCard(ModelViewSet):
-    queryset = CreditCard.objects.all()
+    queryset = Card.objects.all()
     serializer_class = CreditCardSerializer

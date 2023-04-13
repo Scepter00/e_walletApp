@@ -11,6 +11,6 @@ class User(UserAdmin):
 
 admin.site.register(Account)
 admin.site.register(Wallet)
-admin.site.register(CreditCard)
+admin.site.register(Card)
 admin.site.register(Transaction)
-admin.site.register(Notification)
+
