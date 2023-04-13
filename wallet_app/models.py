@@ -5,7 +5,7 @@ from django.db import models
 # Create your models here.
 class WalletUser(AbstractUser):
     email = models.EmailField(unique=True)
-    phone = models.CharField(unique=True, max_length=15, default=None)
+    phone = models.CharField(unique=True, max_length=15, null=True)
     profile_image = models.ImageField(upload_to='media/images', default=None)
 
 

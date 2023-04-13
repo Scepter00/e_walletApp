@@ -14,7 +14,7 @@ class WalletSerializer(serializers.ModelSerializer):
 class AccountSerializer(serializers.ModelSerializer):
     class Meta:
         model = Account
-        fields = ['bank', 'account_name', 'account_number']
+        fields = ['bank', 'account_number']
 
 
 class CreditCardSerializer(serializers.ModelSerializer):
