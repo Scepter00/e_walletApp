@@ -57,8 +57,9 @@ class Wallet(models.Model):
     balance = models.DecimalField(max_digits=12, decimal_places=2)
     wallet_user = models.OneToOneField(WalletUser, on_delete=models.CASCADE, related_name='wallet')
     account = models.ForeignKey(Account, on_delete=models.CASCADE, related_name='wallets')
-    card = models.ForeignKey(Card, on_delete=models.CASCADE, related_name='wallets',default=None )
-    beneficiary = models.ForeignKey(Beneficiary, on_delete=models.CASCADE, related_name='wallets', null=True, blank=True, )
+    card = models.ForeignKey(Card, on_delete=models.CASCADE, related_name='wallets', default=None)
+    beneficiary = models.ForeignKey(Beneficiary, on_delete=models.CASCADE, related_name='wallets', null=True,
+                                    blank=True, )
     transaction = models.ForeignKey(Transaction, on_delete=models.CASCADE, related_name='wallets', default=None)
 
     def __str__(self):
